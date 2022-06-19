@@ -1,0 +1,86 @@
+
+Spring boot
+	- starter dependencies
+	- one common configuration application.properties or application.yml
+	- web application - inbuilt tomcat server
+	- opiniated configuration
+
+2 ways to create a spring boot
+	- STS Spring Tool Suite (Eclipse for spring framework)
+	- use the spring intializer website
+
+Validation in spring 
+---------------------
+
+basic validations
+bussiness validations
+
+	https://www.baeldung.com/spring-boot-bean-validation
+	https://spring.io/guides/gs/validating-form-input/
+
+steps
+------
+	1) add this dependency in pom.xml
+	 <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+    2) use the javax.persistence annotations on the pojo fields
+    3) use the @Valid annotation in front of the @RequestBody annotation in post/put request methods
+    4) test the endpoints from postman to see if an exception is thrown if the input validations are violated
+	
+could also explore the spring validator framework
+
+Exception Handling
+------------------
+	https://www.baeldung.com/exception-handling-for-rest-with-spring
+	
+	provide global exception handlers for minimum 3 use cases
+		- MethodArgumentNotValidException , whenever input validations are violated
+		- Custom exception like BookNotFoundException etc
+		- ApplicationException/SystemException when the DAO layer throws an exception - check for DataAccessException of Spring Data JPA
+	
+Spring boot Logging
+-------------------
+
+Design patterns of Java - GOF
+
+SLF4J (Simple Logging Facade for Java) is a simple facade or abstraction for various 
+logging frameworks, such as Java Util Logging (JUL), Logback and Log4j2. 
+We use the abstract SLF4J API in the application, and later we can plug in any desired 
+logging framework as underlying implementation.
+
+spring boot by default uses Logback framework for logging
+
+	- https://www.baeldung.com/spring-boot-logging
+	- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl2P9VIG6rOIDN_ZJd791PWYQPkrg7KLMLrGPMavFxigVrBD3KdNvJm3UxcSKI1dfhUQ&usqp=CAU
+		
+	
+AOP - Aspect Oriented Programming
+---------------------------------
+
+	- https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html
+	- https://howtodoinjava.com/spring-boot2/aop-aspectj/
+	
+	Steps
+	------
+	1) add the spring starter aop dependency in pom.xml file
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+	2) Craete a class LoggingAspect and annotate with @Aspect
+	3) Remove all the Logger objects created in each class in service and controller layer
+	4) test by accessing and enpooint through postman
+
+lombok
+-------
+	- https://projectlombok.org/setup/overview
+	- https://www.baeldung.com/intro-to-project-lombok
+	- https://projectlombok.org/features/Data
+	Steps
+	-----
+	1) Follow the lombok setup guide to setup lombok in eclipse(first reference)
+	2) Add the lombok dependency in pom.xml
+	3) Use lombok annotations wherever necessary
+	
