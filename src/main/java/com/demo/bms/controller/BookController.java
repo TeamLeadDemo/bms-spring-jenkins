@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.bms.exception.ApplicationException;
@@ -23,7 +20,6 @@ import com.demo.bms.exception.BookEmptyException;
 import com.demo.bms.exception.BookNotFoundException;
 import com.demo.bms.pojo.BookPojo;
 import com.demo.bms.service.BookService;
-import com.demo.bms.service.BookServiceImpl;
 
 @CrossOrigin // to enable cors
 @RestController
@@ -88,4 +84,6 @@ public class BookController {
 		return bookService.getBooksByGenreAndAuthor(genre, author);
 		
 	}
+	
+	
 }

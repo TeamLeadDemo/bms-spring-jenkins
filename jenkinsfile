@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git clone') {
+            steps {
+                // Get some code from a GitHub repository
+                git (url : 'https://github.com/TeamLeadDemo/bms-spring-jenkins.git', branch : 'main')
+            }
+        }
+        stage('Build') {
+            steps {
+                // Run Maven on a Unix agent.
+                sh "mvn clean package -Dmaven.test.skip"
+                
+            }
+        }
+        stage('Staging') {
+            steps {
+                // Run Maven on a Unix agent.
+                sh "docker-compose down"
+                sh "docker-compose up -d"
+                
+                // sh "java -jar target/bms-0.0.1-SNAPSHOT.jar"
+                
+            }
+        }
+    }
+}

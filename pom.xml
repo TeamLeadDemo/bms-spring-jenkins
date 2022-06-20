@@ -57,12 +57,12 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- to avoid nosuchmethod error in Launcher api -->
-	<dependency>
-		<groupId>org.junit.platform</groupId>
-		<artifactId>junit-platform-launcher</artifactId>
-		<version>1.4.2</version>
-		<scope>test</scope>
-	</dependency>
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-launcher</artifactId>
+			<version>1.4.2</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	
