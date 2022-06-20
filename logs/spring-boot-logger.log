@@ -475,3 +475,8 @@
 2022-06-19 03:05:21,371 INFO org.springframework.boot.StartupInfoLogger [main] Starting BmsApplication using Java 14.0.2 on DESKTOP-QN882RI with PID 29324 (D:\Poongs\eclipse-workspace\may-core-java-workspace\bms.zip_expanded\bms\target\classes started by Poongs in D:\Poongs\eclipse-workspace\may-core-java-workspace\bms.zip_expanded\bms)
 2022-06-19 03:05:21,375 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
 2022-06-19 03:05:25,308 INFO org.springframework.boot.StartupInfoLogger [main] Started BmsApplication in 4.288 seconds (JVM running for 4.733)
+2022-06-19 23:41:20,817 INFO org.springframework.boot.StartupInfoLogger [main] Starting BmsApplication using Java 14.0.2 on DESKTOP-QN882RI with PID 34872 (D:\Poongs\eclipse-workspace\may-core-java-workspace\bms.zip_expanded\bms\target\classes started by Poongs in D:\Poongs\eclipse-workspace\may-core-java-workspace\bms.zip_expanded\bms)
+2022-06-19 23:41:20,819 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-06-19 23:41:25,609 INFO org.springframework.boot.StartupInfoLogger [main] Started BmsApplication in 5.988 seconds (JVM running for 7.293)
+2022-06-19 23:42:42,863 INFO com.demo.bms.aop.LoggingAspect [http-nio-5555-exec-2] Entering UserController.com.demo.bms.controller.UserController
+2022-06-19 23:42:42,891 INFO com.demo.bms.aop.LoggingAspect [http-nio-5555-exec-2] Exiting UserController.com.demo.bms.controller.UserController

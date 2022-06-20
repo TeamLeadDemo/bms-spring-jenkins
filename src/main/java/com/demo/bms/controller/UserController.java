@@ -10,7 +10,6 @@ import com.demo.bms.pojo.UserPojo;
 
 @CrossOrigin
 @RestController
-@RequestMapping
 public class UserController {
 	// post - to validate a user
 	// http://localhost:5555/users with a request body
